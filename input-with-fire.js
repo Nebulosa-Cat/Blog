@@ -1,5 +1,5 @@
 //來源: 突突本秃 - 给网站增加输入效果 https://wangwangyz.site/archives/1059
-<script>
+//作用: 打字時火花特效
 (function webpackUniversalModuleDefinition(a, b) {
     if (typeof exports === "object" && typeof module === "object") {
         module.exports = b()
@@ -223,4 +223,3 @@
 POWERMODE.colorful = true;
 POWERMODE.shake = false;
 document.body.addEventListener("input", POWERMODE);
-</script>
