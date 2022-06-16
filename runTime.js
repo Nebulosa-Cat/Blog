@@ -1,14 +1,12 @@
 //用途: 紀錄網站架站開始時間
-//頁面每次跳轉都會執行window.pjaxLoaded = function(){}內的程式碼
-window.pjaxLoaded = function(){
-    window.onload = function NewDate(str) {
+function NewDate(str) {
         str = str.split('-');
         var date = new Date();
         date.setUTCFullYear(str[0], str[1] - 1, str[2]);
         date.setUTCHours(0, 0, 0, 0);
         return date;
     }
-    window.onload = function ageCalc() {
+function ageCalc() {
         var hellowWorld = "本站已誕生" + daysold + "天" + hrsold + "小時" + minsold + "分" + seconds + "秒";
         var birthDay = NewDate("2021-07-25");
         var today = new Date();
@@ -26,5 +24,3 @@ window.pjaxLoaded = function(){
         setTimeout(ageCalc, 1000);
     } 
     ageCalc();
-}
-window.pjaxLoaded(); //手動執行 window.pjaxLoaded 讓網頁在第一次載入時也會執行這段腳本
