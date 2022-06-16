@@ -1,7 +1,6 @@
-//By solstice23
 //用途: 紀錄網站架站開始時間
 //頁面每次跳轉都會執行window.pjaxLoaded = function(){}內的程式碼
-window.pjaxLoaded = (){
+//window.pjaxLoaded = (){
     function NewDate(str) {
         str = str.split('-');
         var date = new Date();
@@ -10,6 +9,7 @@ window.pjaxLoaded = (){
         return date;
     }
     function ageCalc() {
+        var hellowWorld = "";
         var birthDay = NewDate("2021-07-25");
         var today = new Date();
         var timeold = today.getTime() - birthDay.getTime();
@@ -25,5 +25,5 @@ window.pjaxLoaded = (){
         document.getElementById("hellowWorld").innerHTML = "本站已誕生" + daysold + "天" + hrsold + "小時" + minsold + "分" + seconds + "秒";
         setTimeout(ageCalc, 1000);
     } ageCalc();
-}
-window.pjaxLoaded(); //手動執行 window.pjaxLoaded 讓網頁在第一次載入時也會執行這段腳本
+//}
+//window.pjaxLoaded(); //手動執行 window.pjaxLoaded 讓網頁在第一次載入時也會執行這段腳本
