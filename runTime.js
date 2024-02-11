@@ -6,7 +6,7 @@ function NewDate(str) {
     date.setUTCHours(0, 0, 0, 0);
     return date;
 }
-window.pjaxLoaded = function ageCalc() {
+function ageCalc() {
     var hellowWorld = "本站已誕生" + daysold + "天" + hrsold + "小時" + minsold + "分" + seconds + "秒";
     var birthDay = NewDate("2021-07-25");
     var today = new Date();
@@ -20,7 +20,8 @@ window.pjaxLoaded = function ageCalc() {
     var hrsold = Math.floor(e_hrsold);
     var e_minsold = (hrsold - e_hrsold) * -60;
     var minsold = Math.floor((hrsold - e_hrsold) * -60); var seconds = Math.floor((minsold - e_minsold) * -60).toString();
-    document.getElementById("hellowWorld").innerHTML = "本站已誕生" + daysold + "天" + hrsold + "小時" + minsold + "分" + seconds + "秒";
+    if (document.getElementById("hellowWorld").innerHTML != null){
+    var document.getElementById("hellowWorld").innerHTML = "本站已誕生" + daysold + "天" + hrsold + "小時" + minsold + "分" + seconds + "秒";}
     setTimeout(ageCalc, 1000);
 }
-window.pjaxLoaded = (ageCalc);
+ageCalc();
