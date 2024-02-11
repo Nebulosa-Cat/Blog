@@ -6,7 +6,7 @@ function NewDate(str) {
     date.setUTCHours(0, 0, 0, 0);
     return date;
 }
-function ageCalc() {
+window.pjaxLoaded = function ageCalc() {
     var hellowWorld = "本站已誕生" + daysold + "天" + hrsold + "小時" + minsold + "分" + seconds + "秒";
     var birthDay = NewDate("2021-07-25");
     var today = new Date();
@@ -23,4 +23,4 @@ function ageCalc() {
     document.getElementById("hellowWorld").innerHTML = "本站已誕生" + daysold + "天" + hrsold + "小時" + minsold + "分" + seconds + "秒";
     setTimeout(ageCalc, 1000);
 }
-ageCalc();
+window.pjaxLoaded = (ageCalc);
